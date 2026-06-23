@@ -1,0 +1,15 @@
+# Web framework
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+
+# Database drivers
+motor>=3.4.0           # async MongoDB driver built on PyMongo
+redis[hiredis]>=5.0.0  # async Redis client; hiredis gives faster response parsing
+
+# Configuration
+pydantic-settings>=2.2.0
+
+# Testing
+pytest>=8.2.0
+pytest-asyncio>=1.0.0
+httpx>=0.27.0          # needed by AsyncClient / ASGITransport

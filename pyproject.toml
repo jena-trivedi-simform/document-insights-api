@@ -1,0 +1,8 @@
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+# Motor and Redis clients bind to the event loop they are created in.
+# A single session-scoped loop ensures all async fixtures and tests share
+# the same loop so Motor/Redis operations never hit "attached to a different loop".
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
